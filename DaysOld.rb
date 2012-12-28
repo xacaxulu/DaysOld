@@ -81,8 +81,8 @@ class DayFind
     puts "Please try again"	
     puts "----------------"
 		
-		birthdate_query
-	end
+    birthdate_query
+  end
 end
 
 ###########
