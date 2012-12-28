@@ -7,14 +7,14 @@ require 'date'
 
 class DayFind
 
-	def initialize
+  def initialize
     @year = ""
     @month = ""
     @day = "" 
-		birthdate_query	
+    birthdate_query	
   end
 
-	def birthdate_query
+  def birthdate_query
     if @year.empty?
       puts "In what year were you born? (YYYY)"
       @year = gets.chomp
