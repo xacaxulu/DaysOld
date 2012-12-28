@@ -43,18 +43,18 @@ class DayFind
 
   def month_validator(month)
     if month.length == 2 && month.to_i != 0 && month.to_i.between?(1,12)
-    birthdate_query
+      birthdate_query
     else
-			month.clear
-    	error
+      month.clear
+      error
     end 
   end
 
   def day_validator(day)
     if day.length == 2 && day.to_i != 0 && day.to_i.between?(1,31)
-			next_method
+      next_method
     else
-			day.clear
+      day.clear
       error
     end
   end
