@@ -8,42 +8,42 @@ require 'date'
 class DayFind
 
 	def initialize
-	  @year = ""
-		@month = ""
-		@day = "" 
+    @year = ""
+    @month = ""
+    @day = "" 
 		birthdate_query	
   end
 
-  def birthdate_query
-		if @year.empty?
-	 		puts "In what year were you born? (YYYY)"
+	def birthdate_query
+    if @year.empty?
+      puts "In what year were you born? (YYYY)"
       @year = gets.chomp
-			year_validator(@year)
-		elsif
-    	@month.empty?
-			puts "In what month were you born? (MM)"
-    	@month = gets.chomp
-    	month_validator(@month)
-		elsif
-   	  @day.empty?
-			puts "On what day were you born? (DD)"
-    	@day = gets.chomp
-    	day_validator(@day)
-		end
-	end
+      year_validator(@year)
+    elsif
+      @month.empty?
+      puts "In what month were you born? (MM)"
+      @month = gets.chomp
+      month_validator(@month)
+    elsif
+      @day.empty?
+      puts "On what day were you born? (DD)"
+      @day = gets.chomp
+      day_validator(@day)
+    end
+  end
 
   def year_validator(year)
     if year.length == 4 && year.to_i != 0 && year.to_i.between?(1900,2012)
-		  birthdate_query
+      birthdate_query
     else
-			year.clear
+      year.clear
       error
     end
   end
 
   def month_validator(month)
     if month.length == 2 && month.to_i != 0 && month.to_i.between?(1,12)
-      birthdate_query
+    birthdate_query
     else
 			month.clear
     	error
